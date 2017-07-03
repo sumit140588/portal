@@ -9,5 +9,9 @@
   </properties>
   <modules>
   	<module>../profile</module>
+  	
+  	
+  	
+  	<module>feature/build.feature</module>
   </modules>
 </project>
