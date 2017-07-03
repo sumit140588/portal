@@ -55,4 +55,12 @@
     	<groupId>in.garaaj</groupId>
     	<relativePath>../..</relativePath>
     </parent>
+    <dependencies>
+    	<dependency>
+    		<groupId>in.garaaj</groupId>
+    		<artifactId>profile.api</artifactId>
+    		<version>0.0.1-SNAPSHOT</version>
+    		<type>bundle</type>
+    	</dependency>
+    </dependencies>
 </project>

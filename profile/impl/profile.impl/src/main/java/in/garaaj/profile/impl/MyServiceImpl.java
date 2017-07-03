@@ -16,10 +16,26 @@
  */
 package in.garaaj.profile.impl;
 
-public class MyServiceImpl implements MyService {
+import in.garaaj.profile.api.Activator;
+import in.garaaj.profile.api.ProfileContext;
+
+public class MyServiceImpl implements Activator {
     
+	
+	
     public String echo(String message) {
         return "Echo processed: " + message;
     }
+
+	public void start(ProfileContext context) {
+		System.out.println("Start");
+		
+	}
+
+	public void stop(ProfileContext context) {
+		// TODO Auto-generated method stub
+		System.out.println("Stop");
+		
+	}
     
 }

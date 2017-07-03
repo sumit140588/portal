@@ -16,10 +16,23 @@
  */
 package in.garaaj.profile.rest;
 
+import java.nio.BufferUnderflowException;
+
+import in.garaaj.profile.api.Activator;
+import in.garaaj.profile.api.ProfileContext;
+
 public class MyServiceImpl implements MyService {
-    
+    Activator activator;
     public String echo(String message) {
+    	 
+    	activator.start(new ProfileContext());
         return "Echo processed: " + message;
     }
+	public Activator getActivator() {
+		return activator;
+	}
+	public void setActivator(Activator activator) {
+		this.activator = activator;
+	}
     
 }
