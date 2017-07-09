@@ -6,6 +6,10 @@
         <feature prerequisite="false" dependency="false">garaaj-dependency</feature>
         <feature prerequisite="false" dependency="false">garaaj-profile</feature>
         <feature prerequisite="false" dependency="false">http</feature>
+        <bundle>mvn:com.fasterxml.jackson.core/jackson-annotations/2.6.0</bundle>
+        <bundle>mvn:com.fasterxml.jackson.core/jackson-core/2.6.0</bundle>
+        <bundle>mvn:com.fasterxml.jackson.core/jackson-databind/2.6.0</bundle>
+        <bundle>mvn:com.fasterxml.jackson.module/jackson-module-jaxb-annotations/2.6.0</bundle>
         <bundle>mvn:in.garaaj/connect.api/0.0.1-SNAPSHOT</bundle>
         <bundle>mvn:in.garaaj/connect.impl/0.0.1-SNAPSHOT</bundle>
         <bundle>mvn:in.garaaj/profile.api/0.0.1-SNAPSHOT</bundle>

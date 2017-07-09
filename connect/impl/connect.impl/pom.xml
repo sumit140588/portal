@@ -55,6 +55,18 @@
     		<artifactId>connect.api</artifactId>
     		<version>0.0.1-SNAPSHOT</version>
     	</dependency>
+    	<dependency>
+    		<groupId>in.garaaj</groupId>
+    		<artifactId>common.base.util</artifactId>
+    		<version>0.0.1-SNAPSHOT</version>
+    		<type>bundle</type>
+    	</dependency>
+    	<dependency>
+    		<groupId>in.garaaj</groupId>
+    		<artifactId>model</artifactId>
+    		<version>0.0.1-SNAPSHOT</version>
+    		<type>bundle</type>
+    	</dependency>
     </dependencies>
     <parent>
     	<groupId>in.garaaj</groupId>
