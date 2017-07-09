@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Licensed to the Apache Software Foundation (ASF) under one or more contributor 
+	license agreements. See the NOTICE file distributed with this work for additional 
+	information regarding copyright ownership. The ASF licenses this file to 
+	You under the Apache License, Version 2.0 (the "License"); you may not use 
+	this file except in compliance with the License. You may obtain a copy of 
+	the License at http://www.apache.org/licenses/LICENSE-2.0 Unless required 
+	by applicable law or agreed to in writing, software distributed under the 
+	License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS 
+	OF ANY KIND, either express or implied. See the License for the specific 
+	language governing permissions and limitations under the License. -->
+<features name="${project.artifactId}-${project.version}"
+	xmlns="http://karaf.apache.org/xmlns/features/v1.0.0">
+	<repository>mvn:org.apache.cxf.karaf/apache-cxf/3.0.4/xml/features</repository>
+	<feature name="garaaj" description="${project.name}" version="${project.version}">
+		<details>${project.description}</details>
+		<!-- <config>foo=bar</config> -->
+		<feature version="${project.version}">garaaj-dependency</feature>
+		<feature version="${project.version}">garaaj-profile</feature>
+		<feature version="${project.version}">garaaj-connect</feature>
+	</feature>
+	<feature name="garaaj-connect" description="${project.name}" version="${project.version}">
+	<details>${project.description}</details>
+		<bundle>mvn:in.garaaj/connect.api/${project.version}
+		</bundle>
+		<bundle>mvn:in.garaaj/connect.impl/${project.version}
+		</bundle>
+<!-- 		<configfile finalname="/etc/connect.cfg">mvn:in.garaaj/connect.impl/${project.version}/cfg/connect.</configfile> -->
+	</feature>
+	<feature name="garaaj-profile" description="${project.name}" version="${project.version}">
+	<details>${project.description}</details>
+		<bundle>mvn:in.garaaj/profile.api/${project.version}
+		</bundle>
+		<bundle>mvn:in.garaaj/profile.impl/${project.version}
+		</bundle>
+		<bundle>mvn:in.garaaj/profile.rest/${project.version}
+		</bundle>
+	</feature>
+	<feature name="garaaj-dependency" description="${project.name}" version="${project.version}">
+	<details>${project.description}</details>
+	<feature>cxf</feature>
+	<feature>http</feature>
+	<bundle>wrap:mvn:org.mongodb/mongo-java-driver/3.4.2</bundle>
+	</feature>
+</features>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<features xmlns="http://karaf.apache.org/xmlns/features/v1.4.0" name="build.feature-0.0.1-SNAPSHOT">
+    <feature version="0.0.0">
+        <feature prerequisite="false" dependency="false">cxf</feature>
+        <feature prerequisite="false" dependency="false">garaaj-connect</feature>
+        <feature prerequisite="false" dependency="false">garaaj-dependency</feature>
+        <feature prerequisite="false" dependency="false">garaaj-profile</feature>
+        <feature prerequisite="false" dependency="false">http</feature>
+        <bundle>mvn:in.garaaj/connect.api/0.0.1-SNAPSHOT</bundle>
+        <bundle>mvn:in.garaaj/connect.impl/0.0.1-SNAPSHOT</bundle>
+        <bundle>mvn:in.garaaj/profile.api/0.0.1-SNAPSHOT</bundle>
+        <bundle>mvn:in.garaaj/profile.impl/0.0.1-SNAPSHOT</bundle>
+        <bundle>mvn:in.garaaj/profile.rest/0.0.1-SNAPSHOT</bundle>
+        <bundle>wrap:mvn:org.mongodb/mongo-java-driver/3.4.2</bundle>
+    </feature>
+</features>
