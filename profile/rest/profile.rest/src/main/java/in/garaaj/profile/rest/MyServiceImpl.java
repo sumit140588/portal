@@ -34,5 +34,9 @@ public class MyServiceImpl implements MyService {
 	public void setActivator(Activator activator) {
 		this.activator = activator;
 	}
+	public String defaultMessage() {
+		// TODO Auto-generated method stub
+		return "Hello World";
+	}
     
 }

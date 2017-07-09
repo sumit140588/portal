@@ -11,12 +11,24 @@
 	language governing permissions and limitations under the License. -->
 <features name="${project.artifactId}-${project.version}"
 	xmlns="http://karaf.apache.org/xmlns/features/v1.0.0">
-	<feature name="garaaj-dependency">
-		
-	</feature>
-	<feature name='garaaj' description='${project.name}' version='${project.version}'>
+	<repository>mvn:org.apache.cxf.karaf/apache-cxf/3.0.4/xml/features</repository>
+	<feature name="garaaj" description="${project.name}" version="${project.version}">
 		<details>${project.description}</details>
 		<!-- <config>foo=bar</config> -->
+		<feature version="${project.version}">garaaj-dependency</feature>
+		<feature version="${project.version}">garaaj-profile</feature>
+		<feature version="${project.version}">garaaj-connect</feature>
+	</feature>
+	<feature name="garaaj-connect" description="${project.name}" version="${project.version}">
+	<details>${project.description}</details>
+		<bundle>mvn:in.garaaj/connect.api/${project.version}
+		</bundle>
+		<bundle>mvn:in.garaaj/connect.impl/${project.version}
+		</bundle>
+<!-- 		<configfile finalname="/etc/connect.cfg">mvn:in.garaaj/connect.impl/${project.version}/cfg/connect.</configfile> -->
+	</feature>
+	<feature name="garaaj-profile" description="${project.name}" version="${project.version}">
+	<details>${project.description}</details>
 		<bundle>mvn:in.garaaj/profile.api/${project.version}
 		</bundle>
 		<bundle>mvn:in.garaaj/profile.impl/${project.version}
@@ -24,5 +36,10 @@
 		<bundle>mvn:in.garaaj/profile.rest/${project.version}
 		</bundle>
 	</feature>
-
+	<feature name="garaaj-dependency" description="${project.name}" version="${project.version}">
+	<details>${project.description}</details>
+	<feature>cxf</feature>
+	<feature>http</feature>
+	<bundle>wrap:mvn:org.mongodb/mongo-java-driver/3.4.2</bundle>
+	</feature>
 </features>

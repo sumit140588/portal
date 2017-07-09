@@ -17,8 +17,8 @@
 -->
 <blueprint xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0" default-activation="lazy">
 
-    <bean id="MyProfileAPIreferenceimpl" class="in.garaaj.profile.impl.MyServiceImpl"/>
+    <bean id="serviceBean" class="in.garaaj.connect.impl.MyServiceImpl"/>
 
-    <service id="MyProfileAPIreference" ref="MyProfileAPIreferenceimpl" interface="in.garaaj.profile.api.Activator"/>
+    <service ref="serviceBean" interface="in.garaaj.connect.impl.MyService"/>
 
 </blueprint>

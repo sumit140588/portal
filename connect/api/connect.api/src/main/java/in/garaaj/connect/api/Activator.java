@@ -14,15 +14,19 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package in.garaaj.profile.rest;
+package in.garaaj.connect.api;
 
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
+import org.osgi.framework.BundleActivator;
+import org.osgi.framework.BundleContext;
 
-public interface MyService {
-    @GET
-    @Path("say")
-    String defaultMessage();
-    public String echo(String message);
-    
+public class Activator implements BundleActivator {
+
+    public void start(BundleContext context) {
+        System.out.println("Starting the bundle");
+    }
+
+    public void stop(BundleContext context) {
+        System.out.println("Stopping the bundle");
+    }
+
 }

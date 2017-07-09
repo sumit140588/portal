@@ -22,12 +22,12 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>profile.api</artifactId>
+    <artifactId>connect.api</artifactId>
     <packaging>bundle</packaging>
 
-    <name>profile.api Bundle</name>
+    <name>connect.api Bundle</name>
     <description>
-        profile.api OSGi bundle project.
+        connect.api OSGi bundle project.
     </description>
 
     <properties>
@@ -35,6 +35,19 @@
         <osgi.version>6.0.0</osgi.version>
     </properties>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.osgi</groupId>
+            <artifactId>org.osgi.core</artifactId>
+            <version>${osgi.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+        	<groupId>org.mongodb</groupId>
+        	<artifactId>mongo-java-driver</artifactId>
+        	<version>3.4.2</version>
+        </dependency>
+    </dependencies>
 
     <build>
         <plugins>
@@ -47,9 +60,9 @@
                     <instructions>
                         <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
                         <Bundle-Version>${project.version}</Bundle-Version>
-                       	
+                        <Bundle-Activator>in.garaaj.connect.api.Activator</Bundle-Activator>
                         <Export-Package>
-                            in.garaaj.profile.api*;version=${project.version}
+                            in.garaaj.connect.api*;version=${project.version}
                         </Export-Package>
                         <Import-Package>
                             *
@@ -62,7 +75,7 @@
 
     <parent>
     	<groupId>in.garaaj</groupId>
-    	<artifactId>profile</artifactId>
+    	<artifactId>connect</artifactId>
     	<version>0.0.1-SNAPSHOT</version>
     	<relativePath>../..</relativePath>
     </parent>

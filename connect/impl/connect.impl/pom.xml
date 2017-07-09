@@ -20,11 +20,11 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>profile.rest</artifactId>
+    <artifactId>connect.impl</artifactId>
     <packaging>bundle</packaging>
 
-    <name>profile.rest Blueprint Bundle</name>
-    <description>profile.rest OSGi blueprint bundle project.</description>
+    <name>connect.impl Blueprint Bundle</name>
+    <description>connect.impl OSGi blueprint bundle project.</description>
 
     <build>
         <plugins>
@@ -38,7 +38,7 @@
                         <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
                         <Bundle-Version>${project.version}</Bundle-Version>
                         <Export-Package>
-                            in.garaaj.profile.rest*;version=${project.version}
+                            in.garaaj.connect.impl*;version=${project.version}
                         </Export-Package>
                         <Import-Package>
                             *
@@ -49,24 +49,17 @@
         </plugins>
     </build>
 
-    <parent>
-    	<version>0.0.1-SNAPSHOT</version>
-    	<artifactId>profile</artifactId>
-    	<groupId>in.garaaj</groupId>
-    	<relativePath>../..</relativePath>
-    </parent>
     <dependencies>
     	<dependency>
     		<groupId>in.garaaj</groupId>
-    		<artifactId>profile.api</artifactId>
+    		<artifactId>connect.api</artifactId>
     		<version>0.0.1-SNAPSHOT</version>
-    		<type>bundle</type>
-    	</dependency>
-    	<dependency>
-    		<groupId>org.apache.cxf</groupId>
-    		<artifactId>cxf-rt-rs-client</artifactId>
-    		<version>3.0.0</version>
-    		<scope>provided</scope>
     	</dependency>
     </dependencies>
+    <parent>
+    	<groupId>in.garaaj</groupId>
+    	<artifactId>connect</artifactId>
+    	<version>0.0.1-SNAPSHOT</version>
+    	<relativePath>../..</relativePath>
+    </parent>
 </project>

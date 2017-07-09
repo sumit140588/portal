@@ -14,15 +14,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package in.garaaj.profile.rest;
-
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
+package in.garaaj.connect.impl;
 
 public interface MyService {
-    @GET
-    @Path("say")
-    String defaultMessage();
+    
     public String echo(String message);
     
 }
